@@ -5,38 +5,31 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+
+  margin: 0; /* Remove default margin */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li {
+  display: inline-block; /* Display buttons horizontally */
+  margin: 10px; /* Add space between buttons */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+button {
+  padding: 10px 20px;
+  border: 1px solid #ddd; /* Add a thin border */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Change cursor to a hand on hover */
+  background-color: #f0f0f0; /* Set button background color */
 }
 
-.card {
-  padding: 2em;
+button:hover {
+  background-color: #e0e0e0; /* Change button background color on hover */
 }
-
-.read-the-docs {
-  color: #888;
+.name {
+  font-size: 2em; /* Set a larger font size for the bank name */
+  font-weight: bold; /* Make the bank name text bold */
+  margin-bottom: 20px; /* Add some space below the bank name */
 }
