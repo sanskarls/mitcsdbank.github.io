@@ -1,2 +1,1 @@
-# Bank-
-Online bank operations
+bank management system
