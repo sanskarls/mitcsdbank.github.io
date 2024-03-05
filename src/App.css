@@ -26,7 +26,7 @@ button {
 }
 
 button:hover {
-  background-color: #e0e0e0; /* Change button background color on hover */
+  background-color: #4a4545f5; /* Change button background color on hover */
 }
 .name {
   font-size: 2em; /* Set a larger font size for the bank name */
