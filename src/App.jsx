@@ -1,35 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import './App.css'; // Assuming you have a CSS file named App.css
+import CreateNewAccount from './createNewAccount'; // Importing CreateNewAccount component
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [showNewAccount, setShowNewAccount] = useState(false);
+  const [Name, setName] = useState('mit bank of india');
+
+  const checkAccountDetails = () => {
+    // Logic for checking account details goes here
+    console.log('Checking account details...');
+  };
+
+  const performTransaction = () => {
+    // Logic for performing transaction goes here
+    console.log('Performing transaction...');
+  };
+
+  const viewTransactionHistory = () => {
+    // Logic for viewing transaction history goes here
+    console.log('Viewing transaction history...');
+  };
+
+  const applyForLoan = () => {
+    // Logic for applying for a loan goes here
+    console.log('Applying for a loan...');
+  };
 
   return (
     <>
+      <h1>{Name}</h1>
+      <ul>
+        <li>
+          <button onClick={() => setShowNewAccount(true)}>Create New Account</button>
+        </li>
+        <li>
+          <button onClick={checkAccountDetails}>Check Account Details</button>
+        </li>
+        <li>
+          <button onClick={performTransaction}>Transaction</button>
+        </li>
+        <li>
+          <button onClick={viewTransactionHistory}>View Transaction History</button>
+        </li>
+        <li>
+          <button onClick={applyForLoan}>Loan</button>
+        </li>
+      </ul>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        {/* Render CreateNewAccount component when showNewAccount is true */}
+        {showNewAccount && <CreateNewAccount />}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
